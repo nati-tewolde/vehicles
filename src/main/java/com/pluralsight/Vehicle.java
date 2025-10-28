@@ -8,6 +8,22 @@ public class Vehicle {
     private int numberOfPassengers;
     private int cargoCapacity;
 
+    public Vehicle(String model, String color, int topSpeed,
+                   int fuelCapacity, int numberOfPassengers, int cargoCapacity) {
+        this.model = model;
+        this.color = color;
+        this.topSpeed = topSpeed;
+        this.fuelCapacity = fuelCapacity;
+        this.numberOfPassengers = numberOfPassengers;
+        this.cargoCapacity = cargoCapacity;
+    }
+
+    public Vehicle(String model, String color, int topSpeed) {
+        this.model = model;
+        this.color = color;
+        this.topSpeed = topSpeed;
+    }
+
     public String getModel() {
         return model;
     }
@@ -57,18 +73,19 @@ public class Vehicle {
     }
 
     public void startEngine() {
-        System.out.println("Starting engine ...");
+        System.out.println("Engine started.");
     }
 
     public void stopEngine() {
-        System.out.println("Switching engine off ...");
+        System.out.println("Engine stopped.");
     }
 
     public void accelerate() {
-        System.out.println("Accelerating!");
+        System.out.println("Vehicle accelerated.");
     }
 
     public void brake() {
-        System.out.println("Braking!");
+        System.out.println("Brakes applied.");
     }
+
 }
